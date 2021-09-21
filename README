@@ -1,0 +1,27 @@
+spear_usbload is a tool to boot a SPEAr SOC over USB.
+It is distributed under GPLv2 license.
+
+It loads a ddr_driver (a binary that initializes the DDR) and then loads a
+firmware (typically U-Boot).
+
+Those binaries must be in uImage format.
+
+1) Compilation
+
+spear_usbload depends on libusb.
+Compilation can be done using
+./autogen.sh
+./configure
+make
+
+2) Installation
+make install
+
+3) Boot over USB
+Set jumpers or switches on your board to enable the USB boot.
+Connect the board to your host using USB.
+Check if the SOC is available
+spear_usbload -s
+
+Load over USB
+spear_usbload -d /path/ddr_driver.img -f /path/firmware.img
