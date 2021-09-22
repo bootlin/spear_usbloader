@@ -8,7 +8,7 @@ AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile src/Makefile])
 
 AM_MAINTAINER_MODE
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign])
 
 # Checks for programs.
 AC_PROG_CC
